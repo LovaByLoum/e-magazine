@@ -319,3 +319,9 @@ remove_action('wp_head','wp_generator');
 
 //disable infos error in connexion
 add_filter('login_errors',create_function('$a',"return null;"));
+
+// disable guntenberg for posts
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// disable for post types
+add_filter('use_block_editor_for_post_type', '__return_false', 10);

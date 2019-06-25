@@ -94,7 +94,7 @@ if ( !defined('ABSPATH') )
 /*reglage de securité*/
 define ('WP_CONTENT_FOLDERNAME', 'emag-content');
 define ('WP_CONTENT_DIR', ABSPATH . WP_CONTENT_FOLDERNAME) ;
-define ('WP_CONTENT_URL', 'http://localhost/projets/axian/srcs'. WP_CONTENT_FOLDERNAME);
+define ('WP_CONTENT_URL', 'http://localhost/projets/e-magazine/srcs/'. WP_CONTENT_FOLDERNAME);
 define ('WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins');
 define ('WP_PLUGIN_URL', WP_CONTENT_URL . '/plugins');
 

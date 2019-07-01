@@ -7,12 +7,7 @@
  * @author : Pulse
  */
 
-add_action('admin_head','e_magazine_custom_admin_head');
-function e_magazine_custom_admin_head(){
-	?>
-	<style>
-
-	</style>
-	
-	<?php
+add_action( 'admin_enqueue_scripts', 'emagazine_admin_enqueue_scripts', 999 );
+function emagazine_admin_enqueue_scripts(){
+	wp_enqueue_style( 'admin-style', get_template_directory_uri() . '/css/admin/styles.css' );
 }

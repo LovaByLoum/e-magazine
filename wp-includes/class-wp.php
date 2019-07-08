@@ -343,7 +343,7 @@ class WP {
 			}
 		}
 
-		// Limit publicly queried post_types to those that are publicly_queryable
+		// Limit publicly queried posttype to those that are publicly_queryable
 		if ( isset( $this->query_vars['post_type'] ) ) {
 			$queryable_post_types = get_post_types( array( 'publicly_queryable' => true ) );
 			if ( ! is_array( $this->query_vars['post_type'] ) ) {

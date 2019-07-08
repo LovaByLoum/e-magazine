@@ -2537,7 +2537,7 @@ class wp_xmlrpc_server extends IXR_Server {
 		$struct = array();
 
 		foreach ( $taxonomies as $taxonomy ) {
-			// capability check for post_types
+			// capability check for posttype
 			if ( ! current_user_can( $taxonomy->cap->assign_terms ) ) {
 				continue;
 			}

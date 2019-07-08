@@ -6398,7 +6398,7 @@ function update_post_caches( &$posts, $post_type = 'post', $update_term_cache = 
 			$ptypes = $post_type;
 		} elseif ( 'any' == $post_type ) {
 			$ptypes = array();
-			// Just use the post_types in the supplied posts.
+			// Just use the posttype in the supplied posts.
 			foreach ( $posts as $post ) {
 				$ptypes[] = $post->post_type;
 			}

@@ -14,8 +14,10 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo" class="footer">
-		<div class="d-flex justify-content-center align-items-center">
-			<div class="copyright">© 2019 Axian E-magazine - Tous droits réservés - <a href="#">Mentions légales</a></div>
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center">
+				<div class="copyright">© 2019 Axian E-magazine - Tous droits réservés - <a href="#">Mentions légales</a></div>
+			</div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

@@ -7,10 +7,11 @@ jQuery( document ).ready( function () {
 	        margin:70,
 	        responsive:{
 	            0:{
-	                items:1
+	                items:1,
+	                center:true
 	            },
 	            768:{
-	                items:1
+	                items:3
 	            },
 	            1000:{
 	                items:6

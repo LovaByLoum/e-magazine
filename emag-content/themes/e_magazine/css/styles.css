@@ -198,8 +198,9 @@ a:focus {
 .footer .copyright {
   color: white;
   font-size: 14px;
+  line-height: 1.4;
 }
-/* line 8, ../sass/_footer.scss */
+/* line 9, ../sass/_footer.scss */
 .footer .copyright a {
   color: white;
 }

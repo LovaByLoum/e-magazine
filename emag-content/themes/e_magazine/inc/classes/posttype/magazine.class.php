@@ -102,18 +102,13 @@ class CMagazine {
 	public static function process_pdf_to_image(  $post_ID, $post, $update ){
 
 		if ( $post->post_status == 'publish' && $post->post_type == 'post' && is_admin()) {
-			$post_meta = get_post_meta($post_ID, 'pdf_magazine', true);
-			$pdfData = get_attached_file($post_meta);
-			$dir = explode('.', $pdfData)[0];
+			$pdf_id = get_post_meta($post_ID, 'pdf_magazine', true);
 
-			if ( !is_dir($dir) ) {
-				mkdir($dir, 0777);
+			$pdf = new PDFFLIP($pdf_id);
+
+			if ( isset( $pdf ) ) {
+				$pdf->convertPdf();
 			}
-
-			$pdf = new PDFFLIP($pdfData, $post_meta);
-			$pdf->convertPdf();
-			$pdf->doVignette();
-
 		}
 
 	}

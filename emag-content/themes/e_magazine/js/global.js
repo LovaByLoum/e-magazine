@@ -1,6 +1,13 @@
 
 jQuery( document ).ready( function () {
 
+	jQuery('#nav-icon').click(function(){
+        jQuery(this).toggleClass('open');
+        jQuery(".nav-mobile").toggleClass('showmenu');
+    });
+
+
+
 	jQuery('.slide-wrapper-gallery .owl-carousel').owlCarousel({
 	        loop:false,
 	        nav:true,
@@ -8,7 +15,9 @@ jQuery( document ).ready( function () {
 	        responsive:{
 	            0:{
 	                items:1,
-	                center:true
+	                center:true,
+	                stagePadding: 70,
+	                margin:0
 	            },
 	            768:{
 	                items:3

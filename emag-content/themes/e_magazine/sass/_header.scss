@@ -21,6 +21,10 @@
 		margin: 0 auto;
 	    margin:0 20px;
 	    position: relative;
+	    display: none;
+		@media #{$min1024} {
+			display: flex;
+		}
 	    #searchform {
 	    	position: relative;
 	    	top: inherit;
@@ -38,6 +42,10 @@
 
 .menu {
 	flex-grow: 1;
+	display: none;
+	@media #{$min1024} {
+		display: flex;
+	}
 	li {
 		font-family: $openSansBold;
 		font-size: 14px;
@@ -49,3 +57,86 @@
 	}
 }
 
+
+#nav-icon {
+	background:none;
+	border:none;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	width: 35px;
+	height: 35px;
+	transform: rotate(0deg);
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+
+#nav-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+#nav-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon.open span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+#nav-icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon.open span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+.nav-mobile {
+	background: #740015;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    top: -999px;
+    transition: all 0.5s;
+    padding: 20px 15px;
+    &.showmenu {
+        opacity: 1;
+        top: 0;
+        padding-top: 90px;
+        z-index: 10;
+    }
+    li {
+    	margin: 0 15px;
+    	a {
+    		display: block;
+    		border-top: 1px solid rgba(255,255,255,.7);
+    		color: #fff;
+    		font-size: 18px;
+    		padding: 20px 0;
+    	}
+    }
+    .only-search {
+    	margin: 50px 15px 0;
+    }
+}

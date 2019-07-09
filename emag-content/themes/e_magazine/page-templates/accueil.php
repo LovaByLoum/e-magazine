@@ -186,7 +186,7 @@
          <div class="container">
             <h2 class="text-center">Explorez les dernières publications</h2>
             <ul class="row">
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/boss.jpg" alt="">
@@ -194,7 +194,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="">
@@ -202,7 +202,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/barea.jpg" alt="">
@@ -210,7 +210,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/essentielle.jpg" alt="">
@@ -218,7 +218,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/lagazette.jpg" alt="">
@@ -226,7 +226,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/gotomada.jpg" alt="">
@@ -234,7 +234,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/tribune.jpg" alt="">
@@ -242,7 +242,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/madagascar.jpg" alt="">
@@ -250,7 +250,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/boss.jpg" alt="">
@@ -258,7 +258,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="">
@@ -266,7 +266,7 @@
                      </figure>
                   </a>
                </li>
-               <li class="col-lg-3">
+               <li class="col-md-6 col-lg-3">
                   <a href="#">
                      <figure>
                         <img src="<?php echo get_template_directory_uri(); ?>/images/data/barea.jpg" alt="">

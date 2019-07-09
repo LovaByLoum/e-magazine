@@ -192,18 +192,22 @@ a:focus {
   }
 }
 /* line 49, ../sass/_header.scss */
+.menu ul {
+  display: flex;
+}
+/* line 52, ../sass/_header.scss */
 .menu li {
   font-family: "Open Sans Bold";
   font-size: 14px;
   margin-right: 20px;
   text-transform: uppercase;
 }
-/* line 54, ../sass/_header.scss */
+/* line 57, ../sass/_header.scss */
 .menu li a {
   color: #fff;
 }
 
-/* line 61, ../sass/_header.scss */
+/* line 64, ../sass/_header.scss */
 #nav-icon {
   background: none;
   border: none;
@@ -217,7 +221,7 @@ a:focus {
   cursor: pointer;
 }
 
-/* line 74, ../sass/_header.scss */
+/* line 77, ../sass/_header.scss */
 #nav-icon span {
   display: block;
   position: absolute;
@@ -231,40 +235,40 @@ a:focus {
   transition: .25s ease-in-out;
 }
 
-/* line 87, ../sass/_header.scss */
+/* line 90, ../sass/_header.scss */
 #nav-icon span:nth-child(1) {
   top: 0px;
 }
 
-/* line 91, ../sass/_header.scss */
+/* line 94, ../sass/_header.scss */
 #nav-icon span:nth-child(2) {
   top: 10px;
 }
 
-/* line 95, ../sass/_header.scss */
+/* line 98, ../sass/_header.scss */
 #nav-icon span:nth-child(3) {
   top: 20px;
 }
 
-/* line 99, ../sass/_header.scss */
+/* line 102, ../sass/_header.scss */
 #nav-icon.open span:nth-child(1) {
   top: 10px;
   transform: rotate(135deg);
 }
 
-/* line 104, ../sass/_header.scss */
+/* line 107, ../sass/_header.scss */
 #nav-icon.open span:nth-child(2) {
   opacity: 0;
   left: -60px;
 }
 
-/* line 109, ../sass/_header.scss */
+/* line 112, ../sass/_header.scss */
 #nav-icon.open span:nth-child(3) {
   top: 10px;
   transform: rotate(-135deg);
 }
 
-/* line 114, ../sass/_header.scss */
+/* line 117, ../sass/_header.scss */
 .nav-mobile {
   background: #740015;
   position: absolute;
@@ -275,18 +279,18 @@ a:focus {
   transition: all 0.5s;
   padding: 20px 15px;
 }
-/* line 123, ../sass/_header.scss */
+/* line 126, ../sass/_header.scss */
 .nav-mobile.showmenu {
   opacity: 1;
   top: 0;
   padding-top: 90px;
   z-index: 10;
 }
-/* line 129, ../sass/_header.scss */
+/* line 132, ../sass/_header.scss */
 .nav-mobile li {
   margin: 0 15px;
 }
-/* line 131, ../sass/_header.scss */
+/* line 134, ../sass/_header.scss */
 .nav-mobile li a {
   display: block;
   border-top: 1px solid rgba(255, 255, 255, 0.7);
@@ -294,7 +298,7 @@ a:focus {
   font-size: 18px;
   padding: 20px 0;
 }
-/* line 139, ../sass/_header.scss */
+/* line 142, ../sass/_header.scss */
 .nav-mobile .only-search {
   margin: 50px 15px 0;
 }

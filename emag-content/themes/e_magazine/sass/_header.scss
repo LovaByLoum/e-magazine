@@ -46,6 +46,9 @@
 	@media #{$min1024} {
 		display: flex;
 	}
+	ul {
+		display: flex;
+	}
 	li {
 		font-family: $openSansBold;
 		font-size: 14px;

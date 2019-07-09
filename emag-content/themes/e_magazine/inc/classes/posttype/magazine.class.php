@@ -50,7 +50,12 @@ class CMagazine {
 			$element = new stdClass();
 
 			//traitement des données
+			$element->id = $pid;
+			$element->pdf_id = get_post_meta($pid,'pdf_magazine', true);
 
+			//pdf flig object
+			$pdfflip = new PDFFLIP($element->pdf_id);
+			$element->images = $pdfflip->getImagesList();
 
 			//stocker dans le tableau statique
 			self::$_elements[$pid] = $element;
@@ -106,9 +111,11 @@ class CMagazine {
 
 			$pdf = new PDFFLIP($pdf_id);
 			$pdf->convertPdf();
-		}
 
+			$post_image_url = wp_get_attachment_image_src($post_ID);
+		}
 	}
+
 
 }
 

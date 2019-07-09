@@ -1,5 +1,5 @@
 <?php
 
-$pdf = new PDFFLIP(50);
+$pdf = new PDFFLIP(176);
 $pdf->convertPdf();
 echo 'ok';

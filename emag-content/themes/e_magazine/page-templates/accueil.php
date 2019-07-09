@@ -1,4 +1,8 @@
 <?php
+
+?>
+
+<?php
    /**
     * Template Name: Accueil
     *
@@ -10,6 +14,14 @@
     */
    
    get_header(); ?>
+<?php
+$magaz = CMagazine::getById(168);
+$images = $magaz->images;
+
+/*var_dump($magaz->images);die;*/
+
+
+?>
 <div id="primary">
    <div class="content">
 
@@ -27,8 +39,9 @@
     <!-- /Banniere -->
 
     <!-- Slider -->
+
+
       <section class="slide-wrapper-gallery">
-         <div class="owl-carousel">
 
             <div class="item">
                <div class="images">
@@ -134,8 +147,6 @@
                </div>
                <div class="caption">lorem ipsum dolor</div>
             </div>
-
-<<<<<<< HEAD
     <div id="flipbook">
         <div class="hard"> Turn.js </div>
         <div class="hard"></div>
@@ -156,7 +167,6 @@
     </script>
 
 <?php get_sidebar(); ?>
-=======
             <div class="item">
                <div class="images">
                   <a href="#" class="item-action">
@@ -177,29 +187,27 @@
                </div>
                <div class="caption">lorem ipsum dolor</div>
             </div>
->>>>>>> remotes/origin/features/feat-integration
+            <div class="item">
+               <div class="images">
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-0" style="z-index: 49;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-1" style="z-index: 48;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-2" style="z-index: 47;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+               </div>
+               <div class="caption">lorem ipsum dolor</div>
+            </div>
 
-            <div class="item">
-               <div class="images">
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-0" style="z-index: 49;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-1" style="z-index: 48;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-2" style="z-index: 47;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-               </div>
-               <div class="caption">lorem ipsum dolor</div>
-            </div>
-            
          </div>
       </section>
       <!-- /Slider -->

@@ -61,8 +61,7 @@ class PDFFLIP{
 	 *
 	 */
 	function getNumberPage(){
-		$files = glob($this->path . DIRECTORY_SEPARATOR . '*.jpg' );
-		return count($files);
+		return count($this->getImagesList());
 	}
 	
 
@@ -100,6 +99,32 @@ class PDFFLIP{
 			//exec("rm -R ". $this->path);
 			unlink($this->path);
 		}
+	}
+
+	function getImagesList(){
+		$files = glob($this->path . DIRECTORY_SEPARATOR . '*.jpg' );
+
+		$uploadUrl = wp_upload_dir();
+		$path = $uploadUrl['baseurl'];
+		$relative_path_info = pathinfo($this->relative_path);
+
+		$urls = array();
+		foreach (  $files as $file ){
+			$pi = pathinfo($file);
+			$urls[] = $path . '/' . $relative_path_info['dirname'] . '/' . $pi['basename'];
+		}
+		uasort( $urls, array($this, 'sortImages'));
+
+		return $urls;
+	}
+
+	function sortImages( $a, $b){
+		$pi1 = pathinfo($a);
+		$pi2 = pathinfo($b);
+
+		$n1 = intval($pi1['filename']);
+		$n2 = intval($pi2['filename']);
+		return ($n1 < $n2) ? -1 : 1;
 	}
 }
 

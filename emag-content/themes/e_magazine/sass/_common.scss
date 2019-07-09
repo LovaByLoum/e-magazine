@@ -1,0 +1,60 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+body, html {
+	font-family: $fontBasic;
+	line-height: 1.2;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+*:focus{
+	box-shadow: none;
+	outline: none;
+	text-decoration:none;
+}
+
+button:focus, 
+a:focus {
+	outline: none;
+    text-decoration: none;
+}
+
+#main {
+	padding: 0;
+}
+
+#page {
+	max-width :100%;
+}
+
+#secondary {
+	display: none;
+}
+
+.btn-primary {
+	background-color: #cc0033;
+	border-color: #cc0033;
+	&:hover, &:focus {
+		background-color: #cc0033;
+		outline: none;
+	}
+	&.btn-pub {
+		font-weight: $bold;
+		text-transform: uppercase;
+		padding: 6px 20px;
+	}
+}
+
+
+
+
+
+

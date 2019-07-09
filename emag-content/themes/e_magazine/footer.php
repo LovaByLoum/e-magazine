@@ -13,13 +13,12 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" role="contentinfo">
-
-
-			<div id="site-generator">
-				<?php do_action( 'e_magazine_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'e_magazine' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'e_magazine' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'e_magazine' ), 'WordPress' ); ?></a>
+	<footer id="colophon" role="contentinfo" class="footer">
+		<div class="container">
+			<div class="d-flex justify-content-center align-items-center">
+				<div class="copyright">© 2019 Axian E-magazine - Tous droits réservés - <a href="#">Mentions légales</a></div>
 			</div>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

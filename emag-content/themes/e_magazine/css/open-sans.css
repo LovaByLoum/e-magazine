@@ -1,0 +1,54 @@
+/* :: open-sans light :: */
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/open-sans/opensans-light-webfont.eot');
+  src: url('../fonts/open-sans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+  local('open_sanslight'),
+  url('../fonts/open-sans/opensans-light-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-light-webfont.woff') format('woff'),
+  url('../fonts/open-sans/opensans-light-webfont.ttf') format('truetype'),
+  url('../fonts/open-sans/opensans-light-webfont.svg#open_sanslight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* :: open-sans regular :: */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/opensans-regular-webfont.eot');
+  src: url('../fonts/open-sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  local('open_sansregular'),
+  url('../fonts/open-sans/opensans-regular-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-regular-webfont.woff') format('woff'),
+  url('../fonts/open-sans/opensans-regular-webfont.ttf') format('truetype'),
+  url('../fonts/open-sans/opensans-regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* :: open-sans bold :: */
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/open-sans/opensans-bold-webfont.eot');
+  src: url('../fonts/open-sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  local('open_sansbold'),
+  url('../fonts/open-sans/opensans-bold-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-bold-webfont.woff') format('woff'),
+  url('../fonts/open-sans/opensans-bold-webfont.ttf') format('truetype'),
+  url('../fonts/open-sans/opensans-bold-webfont.svg#open_sansbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+/* :: open-sans extra-bold :: */
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/open-sans/opensans-extrabold-webfont.eot');
+  src: url('../fonts/open-sans/opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+  local('open_sansextrabold'),
+  url('../fonts/open-sans/opensans-extrabold-webfont.woff2') format('woff2'),
+  url('../fonts/open-sans/opensans-extrabold-webfont.woff') format('woff'),
+  url('../fonts/open-sans/opensans-extrabold-webfont.ttf') format('truetype'),
+  url('../fonts/open-sans/opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}

@@ -109,3 +109,25 @@ function e_magazine_setup() {
 
 }
 endif; // e_magazine_setup
+
+
+//enqueue scripts and styles
+add_action( 'wp_enqueue_scripts', 'magazine_scripts' );
+function magazine_scripts(){
+    //style css
+    wp_enqueue_style('style-bo', get_template_directory_uri() . '/css/e_magazine.css');
+    wp_enqueue_style('style-bootstrap', get_template_directory_uri() . '/css/bootstrap.css');
+    wp_enqueue_style('style-font-verb', get_template_directory_uri() . '/css/verb.css');
+    wp_enqueue_style('style-font-open-sans', get_template_directory_uri() . '/css/open-sans.css');
+    wp_enqueue_style('style-font-awesome', get_template_directory_uri() . '/css/font-awesome.css');
+    wp_enqueue_style('style-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
+    wp_enqueue_style('style-custom-e-magazine', get_template_directory_uri() . '/css/styles.css');
+
+    //script js
+    //wp_enqueue_script('jquery', get_template_directory_uri() .'/js/library/jquery-1.9.min.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('popper', get_template_directory_uri() .'/js/library/popper.min.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('bootstrap', get_template_directory_uri() .'/js/library/bootstrap.min.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('owl-carousel', get_template_directory_uri() .'/js/library/owl.carousel.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('global', get_template_directory_uri() .'/js/global.js', array('jquery'), '1.0',true);
+ 
+}

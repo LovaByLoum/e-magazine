@@ -105,10 +105,7 @@ class CMagazine {
 			$pdf_id = get_post_meta($post_ID, 'pdf_magazine', true);
 
 			$pdf = new PDFFLIP($pdf_id);
-
-			if ( isset( $pdf ) ) {
-				$pdf->convertPdf();
-			}
+			$pdf->convertPdf();
 		}
 
 	}

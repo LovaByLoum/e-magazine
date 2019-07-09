@@ -110,15 +110,13 @@ class CMagazine {
 				mkdir($dir, 0777);
 			}
 
-			$pdf = new PDFFLIP($pdfData);
-
-			/*$pdf->convertPdf();
-			$pdf->doVignette();*/
+			$pdf = new PDFFLIP($pdfData, $post_meta);
+			$pdf->convertPdf();
+			$pdf->doVignette();
 
 		}
 
 	}
-
 
 }
 

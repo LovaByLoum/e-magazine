@@ -59,8 +59,8 @@ if (is_admin()){
 }
 
 //lib
-require_once( get_template_directory() . '/lib/cssmin.php' );
-require_once( get_template_directory()  . '/lib/jsmin.php' );
+/*require_once( get_template_directory() . '/lib/cssmin.php' );
+require_once( get_template_directory()  . '/lib/jsmin.php' );*/
 
 global $e_magazine_options;
 $e_magazine_options = get_option( 'e_magazine_theme_options' );

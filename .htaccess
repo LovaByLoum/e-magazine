@@ -5,8 +5,6 @@ php_value upload_max_filesize 500M
 php_value post_max_size 500M
 php_value max_input_vars 3000
 
-
-
 #Require all granted
 
 DirectoryIndex index.php
@@ -17,37 +15,32 @@ Options +FollowSymlinks
 
 
 #require pass and login
-#rewrite to www
-#RewriteEngine on
-#RewriteCond %{HTTP_HOST} ^netapsys-press.netapsys.fr$
-#RewriteRule ^(.*) http://www.netapsys-press.netapsys.fr/$1 [QSA,L,R=301]
+#AuthUserFile /var/www/html/.htpasswd
+#AuthGroupFile /dev/null
+#AuthName "Acces securise"
+#AuthType Basic
+#Require valid-user
 
 # Authentification ou non selon l'environnement de deploiement
 SetEnvIf HOST "localhost" SERVER_ENV_LOCAL !SERVER_ENV_RECETTE !SERVER_ENV_PREPROD !SERVER_ENV_PROD
+SetEnvIf HOST "e-magazine-recette[.]corp[.]aits[.]mg" !SERVER_ENV_LOCAL SERVER_ENV_RECETTE !SERVER_ENV_PREPROD !SERVER_ENV_PROD
 
-
-#Order deny,allow
-#deny from all
-#allow from env=SERVER_ENV_LOCAL
-#allow from env=SERVER_ENV_RECETTE
-#allow from env=SERVER_ENV_PREPROD
-#allow from env=SERVER_ENV_PROD
-#Satisfy any
+Order deny,allow
+deny from all
+allow from env=SERVER_ENV_LOCAL
+deny from env=SERVER_ENV_RECETTE
+allow from env=SERVER_ENV_PREPROD
+allow from env=SERVER_ENV_PROD
+Satisfy any
 
 # Repertoire virtuel de Base differente par environnement pour la reecriture d'URL
 
 SetEnvIf HOST "localhost" PROJECT_BASE_PATH=/projets/e-magazine/srcs/
+SetEnvIf HOST "e-magazine-recette[.]corp[.]aits[.]mg" PROJECT_BASE_PATH=/
 
-
-# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /projets/e-magazine/srcs/
-RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /projets/e-magazine/srcs/index.php [L]
+RewriteRule . %{ENV:PROJECT_BASE_PATH}index.php [L]
 </IfModule>
-
-# END WordPress
-# END WordPress

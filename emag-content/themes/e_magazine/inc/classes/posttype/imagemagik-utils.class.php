@@ -4,6 +4,7 @@
 class PDFFLIP{
 	public $filename;
 	public $url;
+	public $id;
 	public $path;
 	public $image_url;
 	public $image_path;
@@ -14,8 +15,9 @@ class PDFFLIP{
 	public $vignette_height;
 	public $imagemagikpath;
 	
-	function __construct($pdfURL){
+	function __construct($pdfURL, $id){
 		$this->url = $pdfURL;
+		$this->id = $id;
 		$this->imagemagikpath = "/usr/local/bin/";
 		$this->path = $this->getPdfPath();
 		

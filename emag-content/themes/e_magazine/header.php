@@ -72,11 +72,34 @@
 <body <?php body_class(); ?>>
 
 <div class="page">
+
+	<!-- Menu mobile -->
+    <div class="nav-mobile d-lg-none">
+        <ul>
+           <li><a href="#">Fonctionnalité</a></li>
+           <li><a href="#">Tarif</a></li>
+           <li><a href="#">Inscrivez-vous</a></li>
+        </ul>
+        <!-- Recherche -->
+			<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
+				<?php get_search_form(); ?>
+			</div>
+		<!-- /Recherche -->
+    </div>
+  	<!-- /Menu mobile -->
+
+
 	<header class="header" id="branding" role="banner">
 			<nav role="navigation">
 				<div class="container">
 					<div class="d-flex align-items-center">
 						<h1 class="logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/design/logo.png" alt=""></a></h1>
+
+						<button id="nav-icon" class="navbar-toggle d-lg-none" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+	                        <span></span>
+	                        <span></span>
+	                        <span></span>
+	                    </button>
 
 					
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'e_magazine' ); ?>"><?php _e( 'Skip to primary content', 'e_magazine' ); ?></a></div>

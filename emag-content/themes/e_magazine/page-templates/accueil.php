@@ -66,7 +66,7 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
                           </a-->
 
                        </div>
-                       <div class="caption">lorem ipsum dolor</div>
+                       <div class="caption"><?php echo $emag->title;?></div>
                   </div>
               <?php endforeach;?>
           </div>

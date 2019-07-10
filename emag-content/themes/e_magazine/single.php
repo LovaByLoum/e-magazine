@@ -8,7 +8,8 @@
  * @since e_magazine 1.0
  * @author : Pulse
  */
-
+global $post;
+$emag = CMagazine::getById($post->ID);
 get_header(); ?>
 
     <div id="primary">

@@ -30,7 +30,7 @@
 	 * Print the <title> tag based on what is being viewed.
 	 */
 	global $page, $paged;
-
+	global $e_magazine_options;
 	wp_title( '|', true, 'right' );
 
 	// Add the blog name.
@@ -75,11 +75,8 @@
 
 	<!-- Menu mobile -->
     <div class="nav-mobile d-lg-none">
-        <ul>
-           <li><a href="#">Fonctionnalité</a></li>
-           <li><a href="#">Tarif</a></li>
-           <li><a href="#">Inscrivez-vous</a></li>
-        </ul>
+	    <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
         <!-- Recherche -->
 			<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
 				<?php get_search_form(); ?>
@@ -93,7 +90,7 @@
 			<nav role="navigation">
 				<div class="container">
 					<div class="d-flex align-items-center">
-						<h1 class="logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/design/logo.png" alt=""></a></h1>
+						<h1 class="logo"><a href="#"><img src="<?php echo $e_magazine_options['logo'];?>" alt=""></a></h1>
 
 						<button id="nav-icon" class="navbar-toggle d-lg-none" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
 	                        <span></span>
@@ -101,7 +98,6 @@
 	                        <span></span>
 	                    </button>
 
-					
 						<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'e_magazine' ); ?>"><?php _e( 'Skip to primary content', 'e_magazine' ); ?></a></div>
 						<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'e_magazine' ); ?>"><?php _e( 'Skip to secondary content', 'e_magazine' ); ?></a></div>
 						<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>

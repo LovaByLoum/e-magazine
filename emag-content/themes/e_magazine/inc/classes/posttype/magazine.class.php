@@ -66,8 +66,8 @@ class CMagazine {
 	 * fonction qui retourne une liste filtrée
 	 *
 	 */
-	public static function getBy($tax = null) {
-		$args = array (
+	public static function getBy($args = array()) {
+		$default_args = array (
 			'post_type' => 'post',
 			'post_status' => 'publish',
 			'numberposts' => -1,
@@ -77,13 +77,15 @@ class CMagazine {
 			'fields' => 'ids'
 		);
 
-		if(!is_null($tax)) {
+		/*if(!is_null($tax)) {
 			$args['tax_query'][] = array (
 				'taxonomy' => 'category',
 				'field' => 'id',
 				'terms' => $tax
 			);
-		}
+		}*/
+
+		$args = wp_parse_args($args, $default_args);
 
 		$elements = get_posts($args);
 		$elts = array();
@@ -112,7 +114,6 @@ class CMagazine {
 			$pdf = new PDFFLIP($pdf_id);
 			$pdf->convertPdf();
 
-			$post_image_url = wp_get_attachment_image_src($post_ID);
 		}
 	}
 

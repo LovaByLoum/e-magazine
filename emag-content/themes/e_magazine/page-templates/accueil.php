@@ -15,10 +15,10 @@
    
    get_header(); ?>
 <?php
-$magaz = CMagazine::getById(168);
-$images = $magaz->images;
+//$magaz = CMagazine::getById(168);
 
-/*var_dump($magaz->images);die;*/
+$derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
+
 
 
 ?>
@@ -43,26 +43,7 @@ $images = $magaz->images;
 
       <section class="slide-wrapper-gallery">
 
-            <div class="item">
-               <div class="images">
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-0" style="z-index: 49;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-1" style="z-index: 48;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-                  <a href="#" class="item-action">
-                     <div class="image-container cover-2" style="z-index: 47;">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
-                     </div>
-                  </a>
-               </div>
-               <div class="caption">lorem ipsum dolor</div>
-            </div>
+
 
             <div class="item">
                <div class="images">
@@ -147,26 +128,29 @@ $images = $magaz->images;
                </div>
                <div class="caption">lorem ipsum dolor</div>
             </div>
-    <div id="flipbook">
-        <div class="hard"> Turn.js </div>
-        <div class="hard"></div>
-        <div> Page 1 </div>
-        <div> Page 2 </div>
-        <div> Page 3 </div>
-        <div> Page 4 </div>
-        <div class="hard"></div>
-        <div class="hard"></div>
-    </div>
 
-    <script type="text/javascript">
-        $("#flipbook").turn({
-            width: 400,
-            height: 300,
-            autoCenter: true
-        });
-    </script>
+            <div class="item">
+               <div class="images">
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-0" style="z-index: 49;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-1" style="z-index: 48;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+                  <a href="#" class="item-action">
+                     <div class="image-container cover-2" style="z-index: 47;">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                     </div>
+                  </a>
+               </div>
+               <div class="caption">lorem ipsum dolor</div>
+            </div>
 
-<?php get_sidebar(); ?>
+
             <div class="item">
                <div class="images">
                   <a href="#" class="item-action">
@@ -208,7 +192,6 @@ $images = $magaz->images;
                <div class="caption">lorem ipsum dolor</div>
             </div>
 
-         </div>
       </section>
       <!-- /Slider -->
 

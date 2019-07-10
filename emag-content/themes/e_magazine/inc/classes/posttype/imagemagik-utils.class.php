@@ -107,11 +107,12 @@ class PDFFLIP{
 		$uploadUrl = wp_upload_dir();
 		$path = $uploadUrl['baseurl'];
 		$relative_path_info = pathinfo($this->relative_path);
+		$path_info = pathinfo($this->path);
 
 		$urls = array();
 		foreach (  $files as $file ){
 			$pi = pathinfo($file);
-			$urls[] = $path . '/' . $relative_path_info['dirname'] . '/' . $pi['basename'];
+			$urls[] = $path . '/' . $relative_path_info['dirname'] . '/' .  $path_info['basename'] . '/' . $pi['basename'];
 		}
 		uasort( $urls, array($this, 'sortImages'));
 

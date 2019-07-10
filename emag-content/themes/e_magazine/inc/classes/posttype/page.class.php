@@ -100,6 +100,5 @@ class CPage
 
 }
 
-add_action( "init", "CPage::action" );
 
 ?>

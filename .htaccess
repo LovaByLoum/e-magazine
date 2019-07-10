@@ -24,6 +24,7 @@ Options +FollowSymlinks
 # Authentification ou non selon l'environnement de deploiement
 SetEnvIf HOST "localhost" SERVER_ENV_LOCAL !SERVER_ENV_RECETTE !SERVER_ENV_PREPROD !SERVER_ENV_PROD
 SetEnvIf HOST "e-magazine-recette[.]corp[.]aits[.]mg" !SERVER_ENV_LOCAL SERVER_ENV_RECETTE !SERVER_ENV_PREPROD !SERVER_ENV_PROD
+SetEnvIf HOST "e-magazine-recette[.]aits[.]mg" !SERVER_ENV_LOCAL SERVER_ENV_RECETTE !SERVER_ENV_PREPROD !SERVER_ENV_PROD
 
 Order deny,allow
 deny from all
@@ -37,6 +38,7 @@ Satisfy any
 
 SetEnvIf HOST "localhost" PROJECT_BASE_PATH=/projets/e-magazine/srcs/
 SetEnvIf HOST "e-magazine-recette[.]corp[.]aits[.]mg" PROJECT_BASE_PATH=/
+SetEnvIf HOST "e-magazine-recette[.]aits[.]mg" PROJECT_BASE_PATH=/
 
 <IfModule mod_rewrite.c>
 RewriteEngine On

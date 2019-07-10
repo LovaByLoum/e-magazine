@@ -1,5 +1,5 @@
 <?php
-
+global $post;
 ?>
 
 <?php
@@ -16,6 +16,8 @@
    get_header(); ?>
 <?php
 //$magaz = CMagazine::getById(168);
+
+$page = CPage::getById($post->ID);
 
 $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
 

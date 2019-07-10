@@ -1,0 +1,55 @@
+emag-content/uploads/*
+emag-content/logs/*
+emag-content/temp-write*
+sql/*
+
+# Ignore htaccess due to multiple environment protection.
+#.htaccess
+
+
+# Fichiers crees lors de conflits.
+*.orig
+
+# Fichiers specifiques a Edit plus.
+*.bak
+
+# Fichiers specifique a Eclipse et Aptana.
+*.settings/*
+*.project
+
+# Fichiers specifique a PHPStorm.
+*.idea/*
+
+# Fichiers specifique a Komodo.
+*.komodoproject
+*.kpf
+*.komodotools/*
+
+# Fichiers specifique a Netbeans.
+nbproject/*
+
+# Parasites generes par Windows.
+Thumbs.db
+
+# Fichiers journaux.
+*.log
+
+# Archives et fichiers compresses.
+#*.gz
+#*.7z
+#*.rar
+#*.tar
+#*.zip
+
+# Repertoire git des modules de contrib:
+.git/
+
+# Ficher patch et de rejet d'applications du patch.
+*.rej
+*.patch
+
+# Fichier generer par l'editeur phpstorm
+.idea/
+*.scssc
+sitemap.xml
+sitemap.xml.gz

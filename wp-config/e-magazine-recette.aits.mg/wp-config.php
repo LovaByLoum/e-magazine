@@ -84,7 +84,7 @@ $table_prefix  = 'emag_';
  */
 
 
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 /* C’est tout, ne touchez pas à ce qui suit ! */
 
 /** Chemin absolu vers le dossier de WordPress. */
@@ -94,7 +94,7 @@ if ( !defined('ABSPATH') )
 /*reglage de securité*/
 define ('WP_CONTENT_FOLDERNAME', 'emag-content');
 define ('WP_CONTENT_DIR', ABSPATH . WP_CONTENT_FOLDERNAME) ;
-define ('WP_CONTENT_URL', 'https://e-magazine-recette.corp.aits.mg/'. WP_CONTENT_FOLDERNAME);
+define ('WP_CONTENT_URL', 'https://e-magazine-recette.aits.mg/'. WP_CONTENT_FOLDERNAME);
 define ('WP_PLUGIN_DIR', WP_CONTENT_DIR . '/plugins');
 define ('WP_PLUGIN_URL', WP_CONTENT_URL . '/plugins');
 

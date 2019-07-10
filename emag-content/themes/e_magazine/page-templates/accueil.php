@@ -21,7 +21,7 @@ $page = CPage::getById($post->ID);
 
 $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
 
-
+/*var_dump($derniers_emagazine);die;*/
 
 ?>
 <div id="primary">
@@ -54,16 +54,16 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
                                 <img src="<?php echo $emag->vignette;?>" alt="" class="image">
                              </div>
                           </a>
-                          <!--a href="#" class="item-action">
+                          <a href="#" class="item-action">
                              <div class="image-container cover-1" style="z-index: 48;">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                                 <img src="<?php echo $emag->images[1];?>" alt="" class="image">
                              </div>
                           </a>
                           <a href="#" class="item-action">
                              <div class="image-container cover-2" style="z-index: 47;">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/data/zay.jpg" alt="" class="image">
+                                 <img src="<?php echo $emag->images[2];?>" alt="" class="image">
                              </div>
-                          </a-->
+                          </a>
 
                        </div>
                        <div class="caption"><?php echo $emag->title;?></div>

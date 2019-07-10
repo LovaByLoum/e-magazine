@@ -27,5 +27,33 @@ jQuery( document ).ready( function () {
 	            }
 	        }
 	    })
+
+
+
+	jQuery('.flipbook').turn({
+		elevation: 50,
+		gradients: true,
+		autoCenter: true,
+		when:{
+                missing: function (e, pages) {                      
+                    for (var i = 0; i < pages.length; i++) {
+                        jQuery('.flipbook').turn('addPage',page[pages[i]],pages[i]);
+                    }
+                }
+            }
+	});
+
+	
+
+
     
 });
+
+
+
+
+	
+		
+
+
+

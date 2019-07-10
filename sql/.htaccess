@@ -1,3 +1,1 @@
-<FilesMatch ^sql$>
-    deny from all
-</FilesMatch>
+deny from all

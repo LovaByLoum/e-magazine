@@ -9,6 +9,7 @@
  * @since e_magazine 1.0
  * @author : Pulse
  */
+global $e_magazine_options;
 ?>
 
 	</div><!-- #main -->
@@ -16,7 +17,7 @@
 	<footer id="colophon" role="contentinfo" class="footer">
 		<div class="container">
 			<div class="d-flex justify-content-center align-items-center">
-				<div class="copyright">© 2019 Axian E-magazine - Tous droits réservés - <a href="#">Mentions légales</a></div>
+				<div class="copyright"><?php echo $e_magazine_options['copyright'];?></div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

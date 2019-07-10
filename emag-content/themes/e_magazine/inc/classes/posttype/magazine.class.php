@@ -59,7 +59,7 @@ class CMagazine {
 
 			$thumbnail_id = get_post_meta($pid,'_thumbnail_id', true);
 			if ( $thumbnail_id > 0 ){
-				list($element->vignette) = wp_get_attachment_image_src($thumbnail_id, 'thumbnail');
+				list($element->vignette) = wp_get_attachment_image_src($thumbnail_id, IMAGE_SIZE_ACTUS_VIGNETTE);
 			} else {
 				$element->vignette = isset($element->images[0]) ? $element->images[0] : '';
 			}
@@ -155,7 +155,7 @@ class CMagazine {
 		?>
 			<a href="<?php echo get_permalink($pid); ?>">
 				<figure>
-					<img src="<?php echo $emag->vignette ?>" alt="">
+					<img src="<?php echo $emag->vignette ?>" alt="<?php echo esc_attr($emag->title);?>">
 					<figcaption><?php echo $emag->title ?></figcaption>
 				</figure>
 			</a>

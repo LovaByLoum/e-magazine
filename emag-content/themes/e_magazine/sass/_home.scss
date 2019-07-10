@@ -127,6 +127,8 @@
 			.image-container {
 				position: absolute;
 				transition: transform .1s ease-in;
+				height: 100%;
+				width: 100%;
 				&:after, &:before {
 					position: absolute;
 				    top: 0;
@@ -154,6 +156,8 @@
 				    min-width: 100%;
 				    -moz-transform: translate3d(0,0,0);
 				    transform: translate3d(0,0,0);
+					height:100%;
+					width:100%;
 				}
 			}
 		}
@@ -198,6 +202,10 @@
 			margin-bottom: 30px;
 			figure {
 				text-align: center;
+				height: auto;
+				@media #{$min768} {
+					height:290px;
+				}
 				figcaption {
 					font-size: 12px;
 					font-weight: $bold;
@@ -212,6 +220,8 @@
 					-moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.69);
 					box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.69);
 					opacity: 1;
+					height:100%;
+					width:100%;
 				}
 				&:hover {
 					text-decoration:none;
@@ -227,14 +237,12 @@
 	}
 
 	.btn-plus {
-		background-color: #fff;
-		border:1px solid #ccc;
 		font-size: 14px;
 		text-transform: uppercase;
 		width: 300px;
-		&:hover {
-			background-color: #f1f2f3;
-		}
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 6px 20px;
 	}
 	
 }

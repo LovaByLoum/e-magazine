@@ -104,8 +104,7 @@ function e_magazine_setup() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 
-	add_image_size( IMAGE_SIZE_ACTUS_VIGNETTE, 100, 100, true );
-	add_image_size( IMAGE_SIZE_ACTUS_MEDIUM, 500, 300 );
+	add_image_size( IMAGE_SIZE_ACTUS_VIGNETTE, 205, 290 );
 
 }
 endif; // e_magazine_setup

@@ -49,19 +49,19 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
               <?php foreach ( $derniers_emagazine as $emag ):?>
                   <div class="item">
                        <div class="images">
-                          <a href="#" class="item-action">
+                          <a href="<?php echo get_permalink($emag->id);?>" class="item-action">
                              <div class="image-container cover-0" style="z-index: 49;">
-                                <img src="<?php echo $emag->vignette;?>" alt="" class="image">
+                                <img src="<?php echo $emag->vignette;?>" alt="<?php echo esc_attr($emag->title);?>" class="image">
                              </div>
                           </a>
-                          <a href="#" class="item-action">
+                          <a href="<?php echo get_permalink($emag->id);?>" class="item-action">
                              <div class="image-container cover-1" style="z-index: 48;">
-                                 <img src="<?php echo $emag->images[1];?>" alt="" class="image">
+                                 <img src="<?php echo $emag->images[1];?>" alt="<?php echo esc_attr($emag->title);?>" class="image">
                              </div>
                           </a>
-                          <a href="#" class="item-action">
+                          <a href="<?php echo get_permalink($emag->id);?>" class="item-action">
                              <div class="image-container cover-2" style="z-index: 47;">
-                                 <img src="<?php echo $emag->images[2];?>" alt="" class="image">
+                                 <img src="<?php echo $emag->images[2];?>" alt="<?php echo esc_attr($emag->title);?>" class="image">
                              </div>
                           </a>
 
@@ -85,9 +85,9 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
              //set list or table view
              $object->setListView('list');
              //number of item on first load
-             $object->setItemNumberOnLoad(2);
+             $object->setItemNumberOnLoad(12);
              //number of item on clicking load button
-             $object->setItemNumberToLoad(2);
+             $object->setItemNumberToLoad(12);
              //container class
              $object->setContainerClasses('row');
              //item classes
@@ -96,7 +96,7 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
              $object->setInfiniteLoadButton(
 	             array(
 		             'id'=>'load-more',
-		             'tpl'=>'<div class="footer" id="load-more"><button class="btn btn-plus more-link">Charger plus...</button></div>'
+		             'tpl'=>'<div class="" id="load-more"><button class="btn btn-primary btn-plus more-link">Charger plus...</button></div>'
 	             ),
 	             array(
 		             'id'=>'no-load-more',
@@ -116,11 +116,6 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
              $object->displayItems();
              ?>
 
-             <style>
-                 #wpil_item_container_emagazine-infinite-box{
-                     display: flex!important;
-                 }
-             </style>
             <div class="btn-list-addon d-flex align-items-center justify-content-center">
                <?php
                 //display the infinite loading button

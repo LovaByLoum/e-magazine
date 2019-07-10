@@ -29,18 +29,41 @@ jQuery( document ).ready( function () {
 	    })
 
 
-
-	jQuery('.flipbook').turn({
-		elevation: 50,
-		gradients: true,
-		autoCenter: true
-	});
-
-	
-
+	ww = jQuery(window).innerWidth();
+	if ( ww <= 992 ){
+        jQuery('.flipbook').turn({
+            elevation: 50,
+            gradients: true,
+            autoCenter: true,
+            display: 'single'
+        });
+	} else {
+        jQuery('.flipbook').turn({
+            elevation: 50,
+            gradients: true,
+            autoCenter: true,
+            display: 'double',
+        });
+	}
 
     
 });
+
+jQuery(window).resize(function(){
+    ww = jQuery(window).innerWidth();
+    if ( ww <= 992 ){
+    	if ( jQuery('.flipbook').turn('display') == 'double' ){
+            jQuery('.flipbook').turn("display", "single");
+		}
+        _fw = jQuery('.flipbook').parents('.container').innerWidth();
+        jQuery('.flipbook').turn("size", _fw - 50, 600);
+    } else {
+        if ( jQuery('.flipbook').turn('display') == 'single' ){
+            jQuery('.flipbook').turn("display", "double");
+            jQuery('.flipbook').turn("size", 922, 600);
+        }
+    }
+})
 
 
 

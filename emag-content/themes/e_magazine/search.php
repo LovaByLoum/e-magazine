@@ -10,49 +10,40 @@
 
 get_header(); ?>
 
-		<section id="primary">
-			<div id="content" role="main">
+    <div id="primary">
+    <div class="content">
+        <section class="book-list">
+            <div class="container">
+                <h2 class="text-center">Résultat de votre recherche pour "<?php echo get_query_var('s'); ?>"</h2>
 
-			<?php if ( have_posts() ) : ?>
+                <ul class="row">
+	                <?php while ( have_posts() ) : the_post();
 
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'e_magazine' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-				</header>
+		                global $post;
+		                $emag = CMagazine::getById($post->ID);
+		                ?>
 
-				<?php e_magazine_content_nav( 'nav-above' ); ?>
+                        <li class="col-md-6 col-lg-3">
+                            <a href="<?php echo get_permalink($emag->id);?>">
+                                <figure>
+                                    <img src="<?php echo $emag->vignette;?>" alt="<?php echo esc_attr($emag->title);?>">
+                                    <figcaption><?php echo $emag->title;?></figcaption>
+                                </figure>
+                            </a>
+                        </li>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+	                <?php endwhile; ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
 
-				<?php endwhile; ?>
+                </ul>
 
-				<?php e_magazine_content_nav( 'nav-below' ); ?>
+            </div>
+        </section>
+        <!-- /Gallery -->
 
-			<?php else : ?>
+    </div>
+        <!-- #content -->
+    </div>
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'e_magazine' ); ?></h1>
-					</header><!-- .entry-header -->
 
-					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'e_magazine' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
-
-			<?php endif; ?>
-
-			</div><!-- #content -->
-		</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

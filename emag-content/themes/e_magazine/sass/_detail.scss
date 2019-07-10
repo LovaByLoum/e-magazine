@@ -1,0 +1,8 @@
+.flipbook-viewport .flipbook{
+  margin: 25px auto!important;
+  width:100%;
+  height:600px;
+  @media #{$min960} {
+    width:922px;
+  }
+}

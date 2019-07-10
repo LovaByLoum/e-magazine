@@ -90,7 +90,7 @@
 			<nav role="navigation">
 				<div class="container">
 					<div class="d-flex align-items-center">
-						<h1 class="logo"><a href="#"><img src="<?php echo $e_magazine_options['logo'];?>" alt=""></a></h1>
+						<h1 class="logo"><a href="<?php echo site_url();?>"><img src="<?php echo $e_magazine_options['logo'];?>" alt=""></a></h1>
 
 						<button id="nav-icon" class="navbar-toggle d-lg-none" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
 	                        <span></span>

@@ -21,23 +21,11 @@ get_header(); ?>
 
                 <div class="zoom-icon zoom-icon-in"></div>
                 <div class="flipbook-viewport">
-                    <div class="container">
+                    <div class="">
                         <div class="flipbook">
                             <?php foreach ($emag->images as $magazine):?>
                                 <div style="background-image:url(<?php echo $magazine; ?>) "></div>
                             <?php endforeach;?>
-                            <!--<div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/1.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/2.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/3.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/4.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/5.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/6.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/7.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/8.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/9.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/10.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/11.jpg)"></div>
-                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/12.jpg)"></div>-->
 
                             <!-- Next button -->
                             <div ignore="1" class="next-button"></div>
@@ -62,4 +50,4 @@ get_header(); ?>
     </div>
 
 
-<?php get_footer('pdf'); ?>
+<?php get_footer(); ?>

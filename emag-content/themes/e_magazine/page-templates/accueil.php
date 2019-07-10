@@ -29,11 +29,11 @@ $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
 
    <!-- Banniere -->
       <section class="banner-wrapper">
-         <div class="banner d-flex justify-content-center align-items-center" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/data/wall_home.jpg)">
+         <div class="banner d-flex justify-content-center align-items-center" style="background-image: url(<?php echo $page->banniere_image?>)">
             <div class="container">
                <div class="text-center">
-                  <h2>lorem ipsum dolor sit amet consectetuer</h2>
-                  <a href="#" class="btn btn-primary btn-pub">Publiez-maintenant</a>
+                  <h2><?php echo $page->texte_introduction?></h2>
+                  <a href="<?php echo $page->lien_bouton?>" class="btn btn-primary btn-pub"><?php echo $page->libelle_bouton?></a>
                </div>
             </div>
          </div>

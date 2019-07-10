@@ -22,18 +22,22 @@ get_header(); ?>
                 <div class="flipbook-viewport">
                     <div class="container">
                         <div class="flipbook">
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/1.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/2.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/3.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/4.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/5.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/6.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/7.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/8.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/9.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/10.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/11.jpg)"></div>
-                            <div style="background-image:url(<?php echo get_template_directory_uri(); ?>/images/pages/12.jpg)"></div>
+                            <?php foreach ($emag->images as $magazine):?>
+                                <?phpvar_dump($magazine);die;?>
+                                <div style="background-image:url(<?php echo $magazine; ?>) "></div>
+                            <?php endforeach;?>
+                            <!--<div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/1.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/2.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/3.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/4.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/5.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/6.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/7.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/8.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/9.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/10.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/11.jpg)"></div>
+                            <div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/12.jpg)"></div>-->
 
                             <!-- Next button -->
                             <div ignore="1" class="next-button"></div>

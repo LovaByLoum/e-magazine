@@ -10,6 +10,7 @@
  */
 global $post;
 $emag = CMagazine::getById($post->ID);
+
 get_header(); ?>
 
     <div id="primary">
@@ -23,7 +24,6 @@ get_header(); ?>
                     <div class="container">
                         <div class="flipbook">
                             <?php foreach ($emag->images as $magazine):?>
-                                <?phpvar_dump($magazine);die;?>
                                 <div style="background-image:url(<?php echo $magazine; ?>) "></div>
                             <?php endforeach;?>
                             <!--<div style="background-image:url(<?php /*echo get_template_directory_uri(); */?>/images/pages/1.jpg)"></div>

@@ -52,7 +52,7 @@ class PDFFLIP{
 		$uploadUrl = wp_upload_dir();
 		$path = $uploadUrl['basedir'];
 		$urlinfo = pathinfo($this->relative_path);
-		$path = $path . DIRECTORY_SEPARATOR . $urlinfo['dirname'] . DIRECTORY_SEPARATOR . $urlinfo['filename'];
+		$path = $path . DIRECTORY_SEPARATOR . $urlinfo['dirname'] . DIRECTORY_SEPARATOR . sanitize_title($urlinfo['filename']);
 		return $path;
 	}
 	
@@ -82,18 +82,9 @@ class PDFFLIP{
 
 		if( file_exists($this->path) ){
 			exec($this->imagemagikpath . "convert -density 100 -quality 100 ".$this->pdf_path." " . $this->path . "/%0d.jpg");
-			$this->doVignette();
 		}
 	}
-	
-	/**
-	 * generer les vignettes
-	 *
-	 */
-	function doVignette(){
-		exec($this->imagemagikpath . "convert ". $this->pdf_path ." -resize 100x100 " . $this->path . "/%0d-vignette.jpg");
-	}
-	
+
 	function removeImages(){
 		if( file_exists($this->path)){
 			//exec("rm -R ". $this->path);
@@ -103,6 +94,10 @@ class PDFFLIP{
 
 	function getImagesList(){
 		$files = glob($this->path . DIRECTORY_SEPARATOR . '*.jpg' );
+		if ( empty($files) ){
+			$this->convertPdf();
+			$files = glob($this->path . DIRECTORY_SEPARATOR . '*.jpg' );
+		}
 
 		$uploadUrl = wp_upload_dir();
 		$path = $uploadUrl['baseurl'];

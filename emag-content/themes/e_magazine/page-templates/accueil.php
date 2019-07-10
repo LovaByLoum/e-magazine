@@ -21,7 +21,7 @@ $page = CPage::getById($post->ID);
 
 $derniers_emagazine = CMagazine::getBy(array('numberposts' => 10));
 
-/*var_dump($derniers_emagazine);die;*/
+
 
 ?>
 <div id="primary">

@@ -26,7 +26,7 @@ jQuery( document ).ready( function () {
 	                items:6
 	            }
 	        }
-	    })
+	    });
 
 
 	ww = jQuery(window).innerWidth();
@@ -42,7 +42,7 @@ jQuery( document ).ready( function () {
             elevation: 50,
             gradients: true,
             autoCenter: true,
-            display: 'double',
+            display: 'double'
         });
 	}
 
@@ -63,7 +63,13 @@ jQuery(window).resize(function(){
             jQuery('.flipbook').turn("size", 922, 600);
         }
     }
-})
+});
+
+jQuery(document).ready(function () {
+    jQuery('[data-toggle="tooltip"]').tooltip({
+        placement : 'bottom'
+    });
+});
 
 
 

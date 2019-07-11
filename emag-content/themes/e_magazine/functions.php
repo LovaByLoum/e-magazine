@@ -125,13 +125,13 @@ function magazine_scripts(){
     //script js
 
 
-   #wp_enqueue_script('jquery', get_template_directory_uri() .'/js/library/jquery-1.9.min.js', array('jquery'), '1.0',true);
-    #wp_enqueue_script('popper', get_template_directory_uri() .'/js/library/popper.min.js', array('jquery'), '1.0',true);
+	wp_enqueue_script('jquery', get_template_directory_uri() .'/js/library/jquery-1.9.min.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('popper', get_template_directory_uri() .'/js/library/popper.min.js', array('jquery'), '1.0',true);
     wp_enqueue_script('bootstrap', get_template_directory_uri() .'/js/library/bootstrap.min.js', array('jquery'), '1.0',true);
     wp_enqueue_script('owl-carousel', get_template_directory_uri() .'/js/library/owl.carousel.js', array('jquery'), '1.0',true);
     wp_enqueue_script('modernizr', get_template_directory_uri() .'/js/library/modernizr.2.5.3.min.js', array('jquery'), '1.0',true);
     wp_enqueue_script('turn', get_template_directory_uri() .'/js/library/turn.js', array('jquery'), '1.0',true);
-    #wp_enqueue_script('zoom', get_template_directory_uri() .'/js/library/zoom.js', array('jquery'), '1.0',true);
+    wp_enqueue_script('zoom', get_template_directory_uri() .'/js/library/zoom.js', array('jquery'), '1.0',true);
     wp_enqueue_script('global', get_template_directory_uri() .'/js/global.js', array('jquery'), '1.0',true);
  
 }

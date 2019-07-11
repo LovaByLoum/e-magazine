@@ -13,16 +13,27 @@ $emag = CMagazine::getById($post->ID);
 
 get_header(); ?>
 
-    <div id="primary">
+    <div id="primary " class="bg-details" >
         <div class="container">
+
 
 
             <div id="canvas">
 
-                <div class="zoom-icon zoom-icon-in"></div>
+                <!--<div class="zoom-icon zoom-icon-in"></div>-->
+                <div class="bar">
+                    <div class="share">
+
+                        <i class="fa fa-search-plus fa-2x" aria-hidden="true" title="Zoom" data-toggle="tooltip"></i>
+                        <i class="fa fa-bars fa-2x" title="Share on facebook"></i>
+                        <i class="fa fa-folder-o fa-2x" title="Share on Twitter"></i>
+                        <i class="fa fa-download fa-2x" title="Share on G+"></i>
+                    </div>
+                    <a class="icon quit"></a>
+                </div>
                 <div class="flipbook-viewport">
-                    <div class="">
                         <div class="flipbook">
+
                             <?php foreach ($emag->images as $magazine):?>
                                 <div style="background-image:url(<?php echo $magazine; ?>) "></div>
                             <?php endforeach;?>
@@ -32,9 +43,7 @@ get_header(); ?>
                             <!-- Previous button -->
                             <div ignore="1" class="previous-button"></div>
 
-
                         </div>
-                    </div>
 
                     <div class="bottom">
                         <div id="slider-bar" class="turnjs-slider">
@@ -50,4 +59,4 @@ get_header(); ?>
     </div>
 
 
-<?php get_footer(); ?>
+<?php get_footer(pdf); ?>

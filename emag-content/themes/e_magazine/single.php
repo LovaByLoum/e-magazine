@@ -15,22 +15,18 @@ get_header(); ?>
 
     <div id="primary " class="bg-details" >
         <div class="container">
-
-
-
             <div id="canvas">
-
                 <!--<div class="zoom-icon zoom-icon-in"></div>-->
-                <div class="bar">
+                <!--<div class="bar">
                     <div class="share">
-
-                        <i class="fa fa-search-plus fa-2x" aria-hidden="true" title="Zoom" data-toggle="tooltip"></i>
-                        <i class="fa fa-bars fa-2x" title="Share on facebook"></i>
-                        <i class="fa fa-folder-o fa-2x" title="Share on Twitter"></i>
-                        <i class="fa fa-download fa-2x" title="Share on G+"></i>
+                        <i class="fa fa-search-plus fa-2x zoom" aria-hidden="true" title="Zoom" data-toggle="tooltip"></i>
+                        <i class="fa fa-bars fa-2x"  title="Liste" data-toggle="tooltip"></i>
+                        <i class="fa fa-folder-o fa-2x" title="Publications" data-toggle="tooltip"></i>
+                        <i class="fa fa-download fa-2x" title="Téléchager" data-toggle="tooltip"></i>
+                        <i class="fa fa-arrows-alt fa-2x" title="Plein écran" data-toggle="tooltip"></i>
                     </div>
                     <a class="icon quit"></a>
-                </div>
+                </div>-->
                 <div class="flipbook-viewport">
                         <div class="flipbook">
 

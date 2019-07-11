@@ -71,6 +71,11 @@ jQuery(document).ready(function () {
     });
 });
 
+jQuery(".flipbook-viewport").zoom({
+    flipbook: jQuery(".flipbook"),
+    max: 3
+});
+
 
 
 

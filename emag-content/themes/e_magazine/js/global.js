@@ -71,12 +71,30 @@ jQuery(document).ready(function () {
     });
 });
 
-jQuery(".flipbook-viewport").zoom({
-    flipbook: jQuery(".flipbook"),
-    max: 3
+
+
+jQuery('.zoom-in').click(function () {
+    zoom.to({
+        element: document.querySelector( '[name="flipbook"]' )
+    });
+
+
+    /*jQuery(".flipbook-viewport").zoom({
+        flipbook: jQuery(".flipbook"),
+        max: 3
+
+    });*/
+});
+
+jQuery('.zoom-out').click(function () {
+    zoom.out();
 });
 
 
+/*jQuery('.liste').click(function () {
+    jQuery('#popupMenu').css('display', 'block');
+})*/
+    
 
 
 	
